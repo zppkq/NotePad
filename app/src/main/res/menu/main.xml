@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/a"
+        android:title="宫格视图"></item>
+    <item
+        android:id="@+id/delete"
+        android:title="批量删除"></item>
+    <item
+        android:id="@+id/c"
+        android:title="设置"></item>
+    <item
+        android:id="@+id/log"
+        android:title="日志记录"></item>
+    <item
+        android:id="@+id/copyDate"
+        android:title="查看云端备份数据"></item>
+</menu>

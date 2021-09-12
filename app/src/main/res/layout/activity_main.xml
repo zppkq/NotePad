@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部笔记"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/three" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0条笔记"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ed_tittle_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_item"
+        android:hint=" 🔍  搜索笔记"
+        android:padding="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rectangles"
+        android:layout_width="match_parent"
+        android:layout_weight="350"
+        android:layout_height="0dp" />
+
+    <ImageButton
+        android:id="@+id/add_note"
+        android:layout_width="60dp"
+        android:layout_weight="60"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:background="@drawable/add"
+        android:onClick="onClick" />
+
+    <LinearLayout
+        android:layout_weight="30"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/notes" />
+
+        <ImageButton
+            android:id="@+id/to_do"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/db"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="笔记" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="152dp"
+            android:onClick="onClick"
+            android:text="待办" />
+    </LinearLayout>
+</LinearLayout>

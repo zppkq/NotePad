@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    tools:context=".UpdateNotePad">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_return"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="30"
+            android:background="@drawable/to_return"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:layout_marginTop="9dp"
+            android:id="@+id/btn_cx"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="150dp"
+            android:layout_weight="23"
+            android:background="@drawable/chexiao_copy"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:layout_marginTop="7dp"
+            android:id="@+id/btn_hf"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="30"
+            android:background="@drawable/huifu"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="30"
+            android:background="@drawable/gou"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="标题"
+            android:textColor="#000"
+            android:textSize="35sp" />
+
+        <EditText
+
+            android:id="@+id/et_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:hint="在此输入标题" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:text="2020年12月15日15:33"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+
+
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btn_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/share"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:id="@+id/to_sc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/save"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/delete3"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:id="@+id/to_print"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/print"
+            android:onClick="onClick" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:onClick="onClick"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51dp"
+            android:onClick="onClick"
+            android:text="收藏" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:onClick="onClick"
+            android:text="删除" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51dp"
+            android:onClick="onClick"
+            android:text="打印" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="NotePad_zp" />
+
+    <version value="14" />
+
+    <list>
+        <mapping class="com.hngy.zp.notepad.tabel.User" />
+        <mapping class="com.hngy.zp.notepad.tabel.NotePad" />
+        <mapping class="com.hngy.zp.notepad.tabel.MyLog" />
+    </list>
+</litepal>
+
+    <!--dbname配置项目的数据库名称。-->
+    <!--    LitePal是一个开放源代码的Android库，使开发人员可以非常轻松地使用SQLite数据库。您无需编写SQL语句即可完成大多数数据库操作，包括创建或升级表，crud操作，聚合函数等-->
+
+    <!--    Litepal是一个轻型的数据库操作框架，运用ORM对象映射模型，所有的数据库操作都通过对象直接进行操作，可以大大简化数据的存储与维护过程。->
+
+    <!-    version配置数据库的版本。每次您要升级数据库时，请在此处加上值。-->
+
+    <!--    列表配置映射类。-->
+
+    <!--    storage配置应将数据库文件存储在何处。内部和外部是唯一有效的选项。-->
+
+    <!--清单文件记得添加android:name="org.litepal.LitePalApplication"-->
+
+    <!--build里面记得添加：implementation 'org.litepal.guolindev:core:3.2.2'-->
+
+    <!--app->src->main->新建assets文件夹->添加litepal.xml文件-->
+
+    <!--每次升级版本号加1-->
+
+    <!--添加新的类记得在litepal.xml文件里面添加<mapping class="包名.类名"></mapping>-->
+
+    <!--继承LitePalSupport-->
+
+    <!--静态操作LitePal-->
+
+    <!--List<Song> songs = LitePal.where("name like ? and duration < ?", "song%", "200").order("duration").find(Song.class);-->
+
+    <!--    您可以使用LitePal中的static delete（）方法删除单个记录。-->
+    <!--    LitePal.delete(Song.class, id);-->
+    <!--    LitePal.deleteAll(Song.class, "duration > ?" , "350");-->
+
+    <!--    保存API非常面向对象。从LitePalSupport继承的每个模型都可以免费使用save（）方法。-->
+    <!--    Album album = new Album();-->
+    <!--    album.setName("album");-->
+    <!--    album.setPrice(10.99f);-->
+    <!--    album.setCover(getCoverImageBytes());-->
+    <!--    album.save();-->
+
+    <!--    从LitePalSupport继承的每个模型也将具有update（）和updateAll（）方法。您可以使用指定的ID更新单个记录。-->
+    <!--    Album albumToUpdate = new Album();-->
+    <!--    albumToUpdate.setPrice(20.99f); // raise the price-->
+    <!--    albumToUpdate.updateAll("name = ?", "album");-->
+
+    <!--如果您的应用程序需要多个数据库，则LitePal会完全支持它。您可以在运行时创建任意数量的数据库。例如：-->
+
+    <!--    LitePalDB litePalDB = new LitePalDB("demo2", 1);-->
+    <!--    litePalDB.addClassName(Singer.class.getName());-->
+    <!--    litePalDB.addClassName(Album.class.getName());-->
+    <!--    litePalDB.addClassName(Song.class.getName());-->
+    <!--    LitePal.use(litePalDB);-->
+
+    <!-- 如果您只想创建一个新数据库，但配置与litepal.xml相同，则可以执行以下操作：-->
+    <!--    LitePalDB litePalDB = LitePalDB.fromDefault("newdb");-->
+    <!--    LitePal.use(litePalDB);-->
+
+    <!--    您始终可以使用以下方法切换回默认数据库：-->
+    <!--    LitePal.useDefault();-->
+
+    <!--    您可以通过指定的数据库名称删除任何数据库：-->
+    <!--&lt;!&ndash;    LitePal.deleteDatabase("newdb");-->
